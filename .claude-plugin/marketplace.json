@@ -1,0 +1,25 @@
+{
+  "name": "moltable-skills",
+  "owner": {
+    "name": "Moltable",
+    "url": "https://moltable.io"
+  },
+  "metadata": {
+    "description": "The best go-to-market agent skills, powered by moltable — lead enrichment, account research, TAM building, and outbound prep, run by your AI agent against live data.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "moltable",
+      "description": "Production GTM workflows on moltable, the agent-native enrichment-table platform. Use when the user wants to enrich a list of leads or companies, build a TAM list, research accounts before outbound, or operate any part of the moltable platform (CLI verbs `auth`, `workbook`, `table`, `column`, `row`, `run`, `stop`, plus the REST API for connections / views / webhooks / API keys). Bundles four foundation skills: auth-and-profiles (credentials), build-enrichment-table (the GTM workhorse — scaffolds workbook + columns + import + run + export), run-and-watch-jobs (execution + monitoring with live SSE progress), and long-tail-fallback (curl recipes for the REST surface the CLI doesn't cover). Triggers include 'enrich this CSV', 'build me a list of X', 'research these accounts', 'watch the running enrichment', and any moltable-shaped request.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/auth-and-profiles",
+        "./skills/build-enrichment-table",
+        "./skills/long-tail-fallback",
+        "./skills/run-and-watch-jobs"
+      ]
+    }
+  ]
+}
